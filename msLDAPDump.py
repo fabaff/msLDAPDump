@@ -48,7 +48,7 @@ class LDAPSearch:
 
     def arg_handler(self):
         opt_parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, epilog=textwrap.dedent(
-            '''Anonymous Bind: python3 msldapdump.py -a --dc 192.168.1.79\n\nAuthenticated Bind: python3 msldapdump.py --dc 192.168.1.79 --user testuser --password Password123!\n\nNTLM Authenticated Bind: python3 msldapdump.py --dc 192.168.1.79 --user testuser --ntlm <hash>\n'''))
+            '''Anonymous Bind: python3 msLDAPDump.py -a --dc 192.168.1.79\n\nAuthenticated Bind: python3 msLDAPDump.py --dc 192.168.1.79 --user testuser --password Password123!\n\nNTLM Authenticated Bind: python3 msLDAPDump.py --dc 192.168.1.79 --user testuser --ntlm <hash>\n'''))
         opt_parser_target = opt_parser.add_argument_group('Target')
         opt_parser_target.add_argument(
             '-d', '--dc', help='Sets the domain controller IP. (Required if running LDAP checks.)')
